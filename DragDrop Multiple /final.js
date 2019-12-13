@@ -30,30 +30,23 @@ function dragLeave(event){
     // if(!event.target.classList.contains("open")) {
         //   }
     event.target.classList.remove("bin-hover");
-    console.log("Remove open class");
     event.target.classList.remove("open");
-    console.log(document.getElementById("recycle").classList)
     event.target.classList.add("close");
-    console.log("Closing the lid!")
-    console.log(document.getElementById("recycle").classList)
 };
 
 
-
-
 function onDrop(event){
-    console.log("Something has dropped!!!")
+    console.log("Something has dropped!!!");
     event.preventDefault();
     event.target.classList.remove("open");
     event.target.classList.add("close");
-    console.log(document.getElementById("recycle").classList)
+    console.log(document.getElementById("recycle").classList); 
     const data = event.dataTransfer.getData('text');
-    const draggableElement = document.getElementById(data);
     const bin = event.target;
 
     // bin.appendChild(draggableElement);
     
-    event.dataTransfer.clearData;
+    // event.dataTransfer.clearData;
     event.target.appendChild(document.getElementById(data));
-    event.target.classList.add("lidClose");
+    // event.target.classList.add("lidClose");
 };
