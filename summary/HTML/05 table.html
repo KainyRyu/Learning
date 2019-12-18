@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Document</title>
+    <style media="screen">
+      table, tr, td, th{
+        border : 1px solid black;
+        border-collapse:collapse;
+        <!-- COMMENT -->
+      }
+    </style>
+  </head>
+  <body>
+    <table>
+      <thead>
+
+      <tr>
+        <th>Name</th>
+        <th>Age</th>
+        <th>City</th>
+        <th>Phone</th>
+        <th>Adress</th>
+      </tr>
+
+    </thead>
+    <tbody>
+      <tr>
+        <td>Lilly</td>
+        <td>34</td>
+        <td>London</td>
+        <td>123-123-123</td>
+        <td>W12 9US</td>
+      </tr>
+      <tr>
+        <td>James</td>
+        <td rowspan="2">20</td>
+        <td>York</td>
+        <td>123-123-123</td>
+        <td>YO1 8SH</td>
+      </tr>
+      <!-- comment -->
+      <tr>
+        <td>James</td>
+        <td>York</td>
+        <td>123-123-123</td>
+        <td>YO1 8SH</td>
+      </tr>
+      <tr>
+
+        <td colspan="4">Total</td>
+        <td>2</td>
+      </tr>
+
+    </tbody>
+    <tfoot>
+
+      <tr>
+        <td>123-123-123</td>
+        <td>YO1 8SH</td>
+      </tr>
+
+    </tfoot>
+    </table>
+  </body>
+</html>

@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Drag and Drop</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/3abf9835a4.js" crossorigin="anonymous"></script>
+    <script src="main.js" defer></script>
+</head>
+<body>
+    <section class="draggable-elements"> 
+        <img id="general" class="draggable" src="../recycle/imgs/bottle.png" draggable="true" ondragstart="drag(event)">
+        <img id="general" class="draggable" src="../recycle/imgs/beercan.png" draggable="true" ondragstart="drag(event)">
+        <img id="" class="draggable" src="../recycle/imgs/coffee.png" draggable="true" ondragstart="drag(event)">
+        <!-- <img id="" class="draggable" src="../recycle/imgs/" draggable="true" ondragstart="drag(event)"> -->
+            <i class="fas fa-frog draggable" draggable="true" style="color: #4bc0c0;" id="frog"></i>
+            <i class="fas fa-frog draggable" draggable="true" style="color: #4bc0c0;" id="frog"></i>
+            <i class="fas fa-cat draggable" draggable="true" style="color: #ff6384;" id="cat"></i>
+            <i class="fas fa-dog draggable" draggable="true" style="color: #36a2eb;" id="dog"></i>
+            <i class="fas fa-dove draggable" draggable="true" style="color: #ffce56;" id="dove"></i>
+            <i class="fas fa-fish draggable" draggable="true" style="color: #9966ff;" id="fish"></i>
+            
+    </section>
+    <section class="droppable-elements">
+        <img id="bin" class="droppable" data-draggable-id="general" src="../recycle/imgs/bin.png" alt="">
+        <div class="droppable" data-draggable-id="frog"></div>
+        <div class="droppable" data-draggable-id="dove"></div>
+        <div class="droppable" data-draggable-id="cat"></div>
+        <div class="droppable" data-draggable-id="fish"></div>
+        <div class="droppable" data-draggable-id="dog"></div>
+
+        <div class="droppable" data-draggable-id="dog"><span>Dog</span></div>
+
+    </section>
+</body>
+</html>

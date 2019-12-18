@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        p{
+            background-color: olivedrab;
+        }
+    </style>
+    <script src="https://code.jquery.com/jquery-3.4.1.js" integrity="sha256-WpOohJOqMqqyKL9FccASB9O0KwACQJpFTUBLTYOVvVU=" crossorigin="anonymous"></script>
+</head>
+<body>
+    
+    <div class="one">Hello World 1</div>
+    <div class="one two" id="three" >Hello World 2</div>
+    <div class="one two four">Hello World 3</div>
+    <br>
+    <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum, sapiente!</p>
+    <br>
+    <h1 id="first">Hello World!</h1>
+    <button id="second" onclick="f()">Click Me!</button> <!--  f()안에 함수 들어갈 수 있음 -->
+    <h1 id="third">Hello World!</h1>
+    <button id="fourth" onclick="f()">Click Me!</button> 
+    <br>
+    <br>
+    <br>
+
+    <button id="btn">Button</button>
+    <br>
+
+
+    <h2 class="hana ">hello wolrd1</h2>
+    <h2 class="hana dul ">hello wolrd2</h2>
+    <h2 id="nett" class="hana dul sett">hello wolrd3</h2>
+    <h2>hello wolrd4</h2>
+    <h2>hello wolrd5</h2>
+    <h2>hello wolrd6</h2>
+    <h2>hello wolrd7</h2>
+
+
+    <br>
+    <br>
+    <br>
+    <br>
+
+
+    <script>
+
+        
+        // //단일 element 반환
+        // document.getElementById('id')
+        // document.querySelector('query ')
+        // //복수 element 반환
+        // document.getElementsByName('name');
+        // document.getElementsByClassName('className')
+        // document.querySelectorAll('className')
+
+        document.write('<br>');
+        k = document.getElementsByClassName('one');
+        console.log(k);
+        document.write('<br>');
+        document.write(k['0']);
+        document.write('<br>');
+        document.write(k['0']['innerHTML']);
+        document.write('<br>');
+        document.write(k['2']['classList']);
+        document.write('<br>');
+        document.write(k['2']['className']);
+        document.write('<br>');
+        document.write('<br>');
+        document.write('<br>');
+
+
+        ////////////////////////////////
+        function f(){
+            document.getElementById('first').innerHTML = 'Whazzzaaaaa';
+            document.getElementById('first').style.backgroundColor = 'royalblue';
+        }
+
+        /*/////////////////////////////
+
+        jQuery
+
+
+        ////////////////////////////// */
+        function j(){
+            $('#third')
+            document.getElementById('third').style.backgroundColor = 'peru';
+        }
+
+        $('#third').click(function j(){
+            $(this).html('Heluuuuuuu');
+        })
+        $('#fourth').click(
+            function j(){
+                $('p').html('This is no more lorem ipsum')
+            }
+        );
+
+
+        /*       
+        
+        $(#id) : select id
+        $(.class) : select class                                   
+        $(h1.class) : class  in h1                                   
+        $(h1.classone.classtwo#idone#idtwo)                                     
+        
+        */
+
+        // $('#btn').click(
+        //     function(){
+        //         $('h2:first').html('WHAZZZZAAAAAAAAAAp');
+        //     }
+        // )
+
+        // $('#btn').click(
+        //     function(){
+        //         $('h2.hana#nett').html('WHAZZZZAAAAAAAAAAp');
+        //     }
+        // )
+
+        /*      filters
+        :even
+        :odd  
+        :first
+        :last
+        :nth-child(2)
+        :nth-child(2n)  - even number
+        
+        */
+
+
+        /*      methods
+        
+        .text
+        .html
+        .val
+        .hide
+        .show
+        .fadeIn
+        .fadeOut
+        
+        */
+
+        $('#btn').click(
+            function(){
+                $('h2:first').html('<mark>Whats going on?<mark>').fadeOut(3000).fadeIn(3000);
+                $('h2:last').text('<mark>Whats going on?<mark>');
+            }
+        );
+
+
+
+
+    </script>
+</body> 
+</html>

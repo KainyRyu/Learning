@@ -1,0 +1,108 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+      <form class="" action="index.html" method="post">
+
+      <input type="text" >
+      <input type="password" >
+      <input type="date" >
+      <input type="time" >
+      <input type="color" >
+      <input type="range" >
+      <input type="radio" >
+      <input type="checkbox" >
+      <input type="file" >
+      <input type="email" >
+
+      <textarea name="name" rows="10" cols="50"></textarea>
+
+      <input type="search" name="" value="">
+
+    </form>
+
+    <!-- action - wehre the form send data to -->
+    <!-- method - what HTTP method (get/post) -->
+
+    <form class="" action="http://www.wikipidia.org" method="get">
+      <label for="email">Email : </label>
+      <input id="email" type="email" name="email" placeholder="email" required>
+      <label for="password">Password : </label>
+      <input id="password" type="password" name="password" placeholder="password"value="password"required>
+      <input type="submit" name="submit" value="submit">
+    </form>
+
+    <form class="" action="index.html" method="get">
+
+      <h3>Select your title</h3>
+      <select class="Gender" name="title">
+        <option value="Male">Mr</option>
+        <option value="Female">Ms</option>
+        <option value="Female">Miss</option>
+      </select>
+
+    </form>
+    <form class="" action="index.html" method="post">
+      <h3>Select your preference</h3>                   <!--make one choice in radio, make sure names are the same name-->
+      <label for="Cats">Cats</label>
+      <input id="cats"type="radio" name="choice" value="">
+      <label for="Dogs">Dogs</label>
+      <input id="dogs"type="radio" name="choice" value="">
+      <input type="submit" name="" value="submit">
+    </form>
+
+    <form>
+    	<div>
+    	<lable for="first">First Name</lable>
+    	<input id="first"type="text" name="furst" value="" placeholder="Will" required>
+    	<lable for="last">Last Name</lable>
+    	<input id="last"type="text" name="last" value="" placeholder="Smith" required>
+    </div>
+    <div>
+    	<lable for="male">Male</lable>
+    	<input id="male"type="radio" name="gender" value="male">
+    	<lable for="female">Female</lable>
+    	<input id="female"type="radio" name="gender" value="female">
+    	<lable for="other">Other</lable>
+    	<input id="other"type="radio" name="gender" value="other">
+    </div>
+    <div>
+    	<lable for="email">Emale:</lable>
+    	<input id="email"type="email" name="email" value="" placeholder="your email" required>
+    	<lable for="password">Password:</lable>
+    	<input id=""type="password" name="password" value="" placeholder="password" pattern=".{5,10}" required title="5 to 10 characters">
+    </div>
+    <div action="">
+
+    		<lable for="Birthday">
+    			Birthday:
+    			<select class="" name="">
+    				<option value="">20</option>
+    				<option value="">21</option>
+    				<option value="">22</option>
+    			</select>
+    			<select class="" name="">
+    				<option value="">Setember</option>
+
+
+
+    				<option value="">Oct</option>
+    				<option value="">Nov</option>
+    			</select>
+    			<select class="" name="">
+    				<option value="">1993</option>
+    				<option value="">1994</option>
+    			</select>
+    		</lable>
+    	<div>
+    		<label for="agreed">I agree to the terms and conditions </label>
+    		<input id="agreed" name="agreed" type="checkbox" required>
+    	</div>
+    	<input type="submit" name="" value="submit">
+    </div>
+    </form>
+  </body>
+</html>
