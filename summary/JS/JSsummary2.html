@@ -1,167 +1,172 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
     <title>Document</title>
-</head>
-<body>
+    <style>
+      body {
+        margin: 100px;
+      }
+    </style>
+  </head>
+  <body>
     <ul>
-        <li>Array</li>
-        <li></li>
+      <li>================================================</li>
+      <li>Array</li>
+      <li>================================================</li>
     </ul>
+
     <script>
-        var arr = [1,2,3,4,5,6]
-        document.write(arr[0]);
-        document.write('<br>');
-        document.write(arr[1]);
-        document.write('<br>');
-        document.write(arr.slice(1,4));
-        document.write('<br>');
-        document.write(arr);
-        document.write('<br>');
-        document.write(arr.pop);
-        document.write('<br>');
-        arr.push(1000);
-        document.write(arr);
-        document.write('<br>');
-        document.write(arr.join('!!'));
-        document.write('<br>');
-        arr.sort();
-        //arr.reverse();
-        document.write(arr);
-        document.write('<br>');
-        document.write('<br>');
-        document.write('***********************');
+      var arr = [1, 2, 3, 4, 5, 6];
+      document.write(arr[0]);
+      document.write("<br>");
+      document.write(arr[1]);
+      document.write("<br>");
+      document.write(arr.slice(1, 4));
+      document.write("<br>");
+      document.write(arr);
+      document.write("<br>");
+      document.write(arr.pop());
+      document.write("<br>");
+      document.write(arr);
+      document.write("<br>");
+      arr.push(1000);
+      document.write(arr);
+      document.write("<br>");
+      document.write(arr.join("!!"));
+      document.write("<br>");
+      arr.sort();
+      //arr.reverse();
+      document.write(arr);
+      document.write("<br>");
+      document.write("<br>");
+      document.write("***********************");
 
-        //////////////////////////////////////
-        document.write('<br>');
-        document.write('<br>');
-        document.write('************Object**************');
-        document.write('<br>');
-        document.write('<br>');
+      //////////////////////////////////////
+      document.write("<br>");
+      document.write("************Object**************");
+      document.write("<br>");
+      document.write("<br>");
 
-        var person = {
-            name:{
-                firstName:"Kainy",
-                lastName:"Ryu"
-            },
-            age:25,
-            working:false,
-        };
-        document.write(person['name']);
-        document.write('<br>');
-        document.write(person['name']['firstName']);
-        document.write('<br>');
-        document.write(person['name']['lastName']);
-        document.write('<br>');
-        document.write(person['age']);
-        document.write('<br>');
-        document.write("Working? : " +person['working']);
-        document.write('<br>');
-        document.write()
-        document.write('<br>');
-        document.write('<br>');
-        document.write('*****************if*************');
-        document.write('<br>');
-        document.write('<br>');
-        var i = 10;
-        if ( i < 10){
-            document.write("if");
-        } else if (i < 9){
-            document.write("else if one");
-        } else if (i > 9){
-            document.write("else if two");
-        } else {
-            document.write("else");
-        }
-        document.write('<br>');
-        document.write('<br>');
-        document.write('**********swich*********');
-        document.write('<br>');
-        document.write('<br>');
-        var a = 3;
-        switch (a) {
-            case 1:
-                document.write('1');
-                break;
-            case 2:
-                document.write('2');
-                break;
-            case 3:
-                document.write('3');
-                break;
-            default:
-                document.write('default');////if의 else 같은
-        }///////조건이 많을 땐 스위치문 사용하는게 if보다 나음
-        document.write('<br>');
-        document.write('<br>');
-        document.write('************* for, while **************');
-        document.write('<br>');
-        document.write('<br>');
-        array = [10,20,30,40,50];
-        for (var i = 0; i < array.length; i++){
-            document.write(array[i]);
-            document.write('<br>')
+      var person = {
+        name: {
+          firstName: "Kainy",
+          lastName: "Ryu"
+        },
+        age: 25,
+        working: false
+      };
+      document.write(person["name"]);
+      document.write("<br>");
+      document.write(person["name"]["firstName"]);
+      document.write("<br>");
+      document.write(person["name"]["lastName"]);
+      document.write("<br>");
+      document.write(person["age"]);
+      document.write("<br>");
+      document.write("Working? : " + person["working"]);
+      document.write("<br>");
+      var newPerson = {};
+      document.write((newPerson.name = "Kane"));
+      document.write("<br>");
+      document.write(newPerson);
+      document.write("<br>");
+      document.write("*****************if*************");
+      document.write("<br>");
+      document.write("<br>");
+      var i = 10;
+      if (i < 10) {
+        document.write("if");
+      } else if (i < 9) {
+        document.write("else if one");
+      } else if (i > 9) {
+        document.write("else if two");
+      } else {
+        document.write("else");
+      }
+      document.write("<br>");
+      document.write("<br>");
+      document.write("**********swich*********");
+      document.write("<br>");
+      document.write("<br>");
+      var a = 3;
+      switch (a) {
+        case 1:
+          document.write("1");
+          break;
+        case 2:
+          document.write("2");
+          break;
+        case 3:
+          document.write("3");
+          break;
+        default:
+          document.write("default"); ////if의 else 같은
+      } ///////조건이 많을 땐 스위치문 사용하는게 if보다 나음
+      document.write("<br>");
+      document.write("<br>");
+      document.write("************* for, while **************");
+      document.write("<br>");
+      document.write("<br>");
+      array = [10, 20, 30, 40, 50];
+      for (var i = 0; i < array.length; i++) {
+        document.write(array[i]);
+        document.write("<br>");
+      }
+      b = 0;
+      while (b < 10) {
+        document.write(b);
+        document.write("<br>");
+        b++;
+      }
+      document.write("<br>");
+      document.write("<br>");
+      document.write("*************scope*******************");
+      document.write("<br>");
+      document.write("<br>");
+      var c = 10; /////function scope
+      if (c > 5) {
+        var d = 100;
+      } else {
+        var d = 1000;
+      }
+      document.write(d);
+      document.write("<br>");
+      document.write("<br>");
+      // var c = 10;
+      // let e = 10000;   /////block scope (if 안에 갇혀있음)
+      // if (c > 5){
+      //     let d = 100;
+      // }
+      // else{
+      //     let d = 1000;
+      // }
+      // document.write(d);
+      document.write("<br>");
+      document.write("<br>");
+      // var c = 10;
+      // const e = 10000;   /////block scope (if 안에 갇혀있음)
+      // if (c > 5){
+      //     const d = 100;
+      // }
+      // else{
+      //     const d = 1000;
+      // }
+      // document.write(d);
+      document.write("<br>");
+      document.write("<br>");
+      document.write("************************************");
+      document.write("<br>");
+      document.write("<br>");
 
-        }
-        b = 0;
-        while (b < 10){
-            document.write(b);
-            document.write('<br>');
-            b++;
-        }
-        document.write('<br>');
-        document.write('<br>');
-        document.write('*************scope*******************');
-        document.write('<br>');
-        document.write('<br>');
-        var c = 10   /////function scope
-        if (c > 5){
-            var d = 100;
-        }
-        else{
-            var d = 1000;
-        }
-        document.write(d);
-        document.write('<br>');
-        document.write('<br>');
-        // var c = 10;
-        // let e = 10000;   /////block scope (if 안에 갇혀있음)
-        // if (c > 5){
-        //     let d = 100;
-        // }
-        // else{
-        //     let d = 1000;
-        // }
-        // document.write(d);
-        document.write('<br>');
-        document.write('<br>');
-        // var c = 10;
-        // const e = 10000;   /////block scope (if 안에 갇혀있음)
-        // if (c > 5){
-        //     const d = 100;
-        // }
-        // else{
-        //     const d = 1000;
-        // }
-        // document.write(d);
-        document.write('<br>');
-        document.write('<br>');
-        document.write('************************************');
-        document.write('<br>');
-        document.write('<br>');
-
-        var g = 10;
-        function f(){
-            g += 100000;
-        }
-        f()
-        document.write(g);
-
-
-    
+      var g = 10;
+      function f() {
+        g += 100000;
+      }
+      f();
+      document.write(g);
     </script>
-</body>
+  </body>
 </html>

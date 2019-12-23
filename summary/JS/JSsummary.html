@@ -1,210 +1,205 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <title>Document</title>
-</head>
-<body>
-  <p id="one">HELLO WORLD</p>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta http-equiv="X-UA-Compatible" content="ie=edge" />
+    <title>Document</title>
+    <style>
+      body {
+        margin: 100px;
+      }
+    </style>
+  </head>
+  <body>
+    <p id="one">HELLO WORLD</p>
 
+    <script type="text/javascript">
+      document.getElementById("one").innerHTML = "HELLO <strong>WORLD</strong>";
+      document.write("hello world write");
+      window.alert("hello world alert");
+      console.log("console log print");
+      //comment
+      document.write("<br>");
 
+      var halo = 100;
+      var halo = "halo";
 
-  <script type="text/javascript">
-    document.getElementById('one').innerHTML = 'HELLO <strong>WORLD</strong>'
-    document.write('hello world write');
-    window.alert('hello world alert');
-    console.log('console log print');
-    //comment
-    document.write("<br>");
+      document.write(halo);
 
-    var halo = 100;
-    var halo = "halo";
+      var one = 1;
+      document.write(one + halo);
+      document.write("<br>");
 
-    document.write(halo);
+      var num = 123123;
+      var str = "This is a string";
+      document.write(typeof num);
+      console.log(typeof str);
 
+      //INDEX
 
-    var one = 1;
-    document.write(one + halo);
-    document.write("<br>");
+      document.write("<br>");
+      document.write("<br>");
+      var name = "KAINY";
+      document.write(name[0]);
 
-    var num = 123123;
-    var str = "This is a string";
-    document.write(typeof(num));
-    console.log(typeof(str));
-
-    //INDEX
-
-    document.write("<br>");
-    document.write("<br>");
-    var name = "KAINY";
-    document.write(name[0]);
-
-
-/*
+      /*
 Number : Number
 String : string
 Boolean : true or flase
 Array : Array
 Function : Function           */
 
-    document.write("<br>");
-    document.write("<br>");
-    document.write("CALCULATION");
-    var x,y,z;
-    x = 3;
-    y = 5;
-    z = "5";
-    document.write( x + y);
-    document.write("<br>");
-    document.write( x - y);
-    document.write("<br>");
-    document.write( x / y);
-    document.write("<br>");
-    document.write( x % y);
-    document.write("<br>");
-    document.write( x * y);
-    document.write("<br>");
-    document.write( x ** y);
-    document.write("<br>");
-    x++; // + x
-    y--; // - y
-    x += 1 // <==  x =(등호x,대입o)) x + 1
-    document.write('x = ', x, "<br> y = ", y);
-    document.write("<br>");
-    document.write("<br>");
+      document.write("<br>");
+      document.write("<br>");
+      document.write("CALCULATION");
+      var x, y, z;
+      x = 3;
+      y = 5;
+      z = "5";
+      document.write(x + y);
+      document.write("<br>");
+      document.write(x - y);
+      document.write("<br>");
+      document.write(x / y);
+      document.write("<br>");
+      document.write(x % y);
+      document.write("<br>");
+      document.write(x * y);
+      document.write("<br>");
+      document.write(x ** y);
+      document.write("<br>");
+      x++; // + x
+      y--; // - y
+      x += 1; // <==  x =(등호x,대입o)) x + 1
+      document.write("x = ", x, "<br> y = ", y);
+      document.write("<br>");
+      document.write("<br>");
 
-    document.write( '1: ', x > y);
-    document.write("<br>");
-    document.write( '2: ', x >= y);
-    document.write("<br>");
-    document.write( '3: ', x < y);
-    document.write("<br>");
-    document.write( '4: ', x <= y);
-    document.write("<br>");
-    document.write( '5: ', x == y);
-    document.write("<br>");
-    document.write( '6: ', x === z);    // type check
-    document.write("<br>");
-    document.write( '7: ', x != y);
-    document.write("<br>");
-    document.write("<br>");
-    document.write("********** AND OR ***********");
+      document.write("1: ", x > y);
+      document.write("<br>");
+      document.write("2: ", x >= y);
+      document.write("<br>");
+      document.write("3: ", x < y);
+      document.write("<br>");
+      document.write("4: ", x <= y);
+      document.write("<br>");
+      document.write("5: ", x == y);
+      document.write("<br>");
+      document.write("6: ", x === z); // type check
+      document.write("<br>");
+      document.write("7: ", x != y);
+      document.write("<br>");
+      document.write("<br>");
+      document.write("********** AND OR ***********");
 
+      //*************************** AND OR ***************************
+      document.write("<br>");
 
-    //*************************** AND OR ***************************
-    document.write("<br>");
+      var i, j;
+      i = true; //1
+      j = false; //0
+      document.write("1: ", i && j); // and : *
+      document.write("<br>");
+      document.write("2: ", i || j); // or :  +
+      document.write("<br>");
+      document.write("3: ", !j); // not
 
-    var i, j;
-    i = true;  //1
-    j = false; //0
-    document.write( '1: ', i && j); // and : *
-    document.write("<br>");
-    document.write( '2: ', i || j); // or :  +
-    document.write("<br>");
-    document.write( '3: ', !j); // not
+      document.write("<br>");
+      document.write("<br>");
+      document.write("<br>");
+      document.write("********** function ***********");
 
-    document.write("<br>");
-    document.write("<br>");
-    document.write("<br>");
-    document.write("********** function ***********");
+      //*************************** function ***************************
+      document.write("<br>");
 
+      function fnc(x, y) {
+        var z;
+        z = x + y;
+        return z;
+      }
+      document.write(fnc(3, 6));
 
-    //*************************** function ***************************
-    document.write("<br>");
+      document.write("<br>");
+      document.write("<br>");
+      document.write("********** built-in function ***********");
 
-    function fnc(x, y){
-      var z;
-      z = x + y;
-      return z;
-    }
-    document.write(fnc(3,6));
+      //*************************** built-in function ***************************
+      document.write("<br>");
 
-    document.write("<br>");
-    document.write("<br>");
-    document.write("********** built-in function ***********");
+      var txt = "HELLOOOOOOOOOOOOOO WORLD!";
+      var upperCase = "to uppercase";
+      var numb = 1;
+      document.write(txt.length);
+      document.write("<br>");
+      document.write(txt.indexOf("WORLD")); // W is on the 19th index
+      document.write("<br>");
+      document.write(txt.slice(0, 7)); // from index 0 until before 7
+      document.write("<br>");
+      document.write(txt.replace("OOOOOOOOOOO", "CCCCCC")); // replace the string
+      document.write("<br>");
+      document.write(upperCase);
+      document.write("<br>");
+      document.write(upperCase.toUpperCase()); // change to uppercase
+      document.write("<br>");
+      document.write(numb.toString() + numb.toString()); // change the type to string
+      document.write("<br>");
+      document.write("<br>");
+      document.write("<br>");
+      document.write("NUMBERS");
+      document.write("<br>");
+      document.write(Math.PI);
+      document.write("<br>");
+      document.write(Math.PI.toFixed(5)); // printn upto 5
+      document.write("<br>");
+      document.write(Math.max(1, 2, 3, 4, 5, 6)); // find the max number
+      document.write("<br>");
+      document.write(Math.random() * 10); // random number in between 0-1
+      document.write("<br>");
+      document.write("<br>");
+      document.write("********** built-in function 2 (Date) ***********");
 
+      //*************************** built-in function 2 (Date) ***************************
+      document.write("<br>");
+      var date = new Date();
+      var month = [
+        "Jan",
+        "Feb",
+        "Mar",
+        "Apr",
+        "May",
+        "Jun",
+        "Jul",
+        "Aug",
+        "Sep",
+        "Oct",
+        "Nov",
+        "Dec"
+      ];
+      var days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
+      document.write(date);
+      document.write("<br>");
+      document.write("Month : ", date.getMonth()); // index number (needs to + 1)
+      document.write("<br>");
+      document.write("Month : ", month[date.getMonth()]); // index number (needs to + 1)
+      document.write("<br>");
+      document.write("Day : ", date.getDay());
+      document.write("<br>");
+      document.write("Day : ", days[date.getDay()]);
+      document.write("<br>");
+      document.write("Date : ", date.getDate());
+      document.write("<br>");
+      document.write("Hours : ", date.getHours());
+      document.write("<br>");
+      document.write("<br>");
+      document.write("<br>");
+      document.write("********** Array ***********");
 
-    //*************************** built-in function ***************************
-    document.write("<br>");
-
-    var txt = "HELLOOOOOOOOOOOOOO WORLD!";
-    var upperCase = "to uppercase";
-    var numb = 1
-    document.write(txt.length);
-    document.write("<br>");
-    document.write(txt.indexOf('WORLD')); // W is on the 19th index
-    document.write("<br>");
-    document.write(txt.slice(0,7)); // from index 0 until before 7
-    document.write("<br>");
-    document.write(txt.replace("OOOOOOOOOOO","CCCCCC")); // replace the string
-    document.write("<br>");
-    document.write(upperCase);
-    document.write("<br>");
-    document.write(upperCase.toUpperCase()); // change to uppercase
-    document.write("<br>");
-    document.write(numb.toString() + numb.toString()); // change the type to string
-    document.write("<br>");
-    document.write("<br>");
-    document.write("<br>");
-    document.write("NUMBERS");
-    document.write("<br>");
-    document.write(Math.PI);
-    document.write("<br>");
-    document.write(Math.PI.toFixed(5)); // printn upto 5
-    document.write("<br>");
-    document.write(Math.max(1,2,3,4,5,6)); // find the max number
-    document.write("<br>");
-    document.write(Math.random()*10); // random number in between 0-1
-    document.write("<br>");
-    document.write("<br>");
-    document.write("********** built-in function 2 (Date) ***********");
-
-
-    //*************************** built-in function 2 (Date) ***************************
-    document.write("<br>");
-    var date = new Date();
-    var month = ["Jan","Feb","Mar","Apr","May","Jun","Jul","Aug","Sep","Oct","Nov","Dec"];
-    var days = ["Sun","Mon","Tue","Wed","Thu","Fri","Sat"]
-    document.write(date);
-    document.write('<br>');
-    document.write("Month : ",date.getMonth()); // index number (needs to + 1)
-    document.write('<br>');
-    document.write("Month : ",month[date.getMonth()]); // index number (needs to + 1)
-    document.write('<br>');
-    document.write("Day : ",date.getDay());
-    document.write('<br>');
-    document.write("Day : ",days[date.getDay()]);
-    document.write('<br>');
-    document.write("Date : ",date.getDate());
-    document.write('<br>');
-    document.write("Hours : ", date.getHours());
-    document.write('<br>');
-    document.write("<br>");
-    document.write("<br>");
-    document.write("********** Array ***********");
-
-
-    //*************************** Array ***************************
-    document.write("<br>");
-    var l = [1,2,3,4,5]
-    document.write(l[2]);
-    document.write("<br>");
-
-
-
-
-
-
-
-
-
-
-
-
-  </script>
-
-
-</body>
+      //*************************** Array ***************************
+      document.write("<br>");
+      var l = [1, 2, 3, 4, 5];
+      document.write(l[2]);
+      document.write("<br>");
+    </script>
+  </body>
 </html>
