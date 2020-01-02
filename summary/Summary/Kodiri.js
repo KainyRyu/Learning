@@ -291,3 +291,223 @@ thisPersonsAge({
 });
 
 // 'I don't know'
+
+/* ***********************************************************
+
+Object
+
+*********************************************************** */
+
+/*   ******************** Object 1 ******************** */
+
+function howManyGoals(player) {
+  return player.eplGoals; //   <== Highlight
+}
+howManyGoals({
+  firstName: "Heung-Min",
+  lastName: "Son",
+  age: 27,
+  eplGoals: 47
+});
+
+// 47
+
+/*   ******************** Object 2 ******************** */
+
+function sonnyGoals(player) {
+  return player.epl.assists; //   <== Highlight
+}
+sonnyGoals({
+  firstName: "Heung-Min",
+  lastName: "Son",
+  age: 27,
+  epl: {
+    appearances: 146,
+    goals: 47,
+    assists: 26
+  }
+});
+
+// 26
+
+/*   ******************** Object 3 ******************** 
+  : dynamically choose the value by using [] */
+
+function goalsSquareBracket(player, prop) {
+  return player.epl[prop]; //   <== Highlight
+}
+goalsSquareBracket(
+  {
+    firstName: "Heung-Min",
+    lastName: "Son",
+    age: 27,
+    epl: {
+      appearances: 146,
+      goals: 47,
+      assists: 26
+    }
+  },
+  "goals"
+);
+
+// 47
+
+/*   ************ Object 4 : get the keys ************ */
+
+function getTheKeys(player) {
+  return Object.keys(player); //   <== Highlight
+}
+getTheKeys({
+  firstName: "Heung-Min",
+  lastName: "Son",
+  age: 27,
+  epl: {
+    appearances: 146,
+    goals: 47,
+    assists: 26
+  }
+});
+
+/*   ************ Object 5 : get the values ************ */
+
+function getTheValues(player) {
+  return Object.values(player); //   <== Highlight
+}
+getTheValues({
+  firstName: "Heung-Min",
+  lastName: "Son",
+  age: 27,
+  epl: {
+    appearances: 146,
+    goals: 47,
+    assists: 26
+  }
+});
+
+/* ***********************************************************
+
+Array
+
+*********************************************************** */
+
+/*   ===================== Array 1 : Find 1 ===================== */
+
+function findNegativeNum(nums) {
+  return nums.find(function(num) {
+    // === nums.find((num) => {   : common callback function
+    return num < 0;
+  });
+}
+
+findNegativeNum([1, 6, -8, 3, -3]);
+
+// -8  (first value of the condition then will stop)
+// The same result but simpler way
+
+function findNegativeNum(nums) {
+  return nums.find(num => num < 0);
+}
+
+findNegativeNum([1, 6, -8, 3, -3]);
+// -8
+
+/*   ===================== Array 1 : Find 2 ===================== */
+
+function bestPlayer(players, score) {
+  return players.find(player => player.goals >= score);
+}
+
+bestPlayer(
+  [
+    { name: "Sonny", goals: "5" },
+    { name: "Dele", goals: "6" },
+    { name: "Harry", goals: "11" }
+  ],
+  10
+);
+
+//{name: "Harry", goals: "11"}
+
+function bestPlayer(players, score) {
+  return players.find(player => player.goals >= score);
+}
+
+bestPlayer(
+  [
+    { name: "Sonny", goals: "5" },
+    { name: "Dele", goals: "6" },
+    { name: "Harry", goals: "11" }
+  ],
+  15
+);
+
+//undefine
+
+/*   ===================== Array 1 : Find 3 ===================== */
+
+function findBestPlayer1(players, score) {
+  let goodPlayer = players.find(player => player.goals >= score);
+  return goodPlayer.name;
+}
+// The same function                            ?????? Question : this is harder to debug?
+function findBestPlayer2(players, score) {
+  return players.find(player => player.goals >= score).name;
+}
+
+findBestPlayer1(
+  [
+    { name: "Dele", goals: "6" },
+    { name: "Sonny", goals: "5" },
+    { name: "Harry", goals: "11" }
+  ],
+  5
+);
+
+// 'Sonny'
+
+/*   ===================== Array 1 : Find 4 ===================== */
+
+function findBestPlayer(players, score) {
+  let goodPlayer = players.find(player => player.goals >= score);
+  // return goodPlayer ? goodPlayer.name : 'There is no player with that score yet'
+  if (goodPlayer === undefined) {
+    return "There is no player with that score yet";
+  } else {
+    return goodPlayer.name;
+  }
+}
+
+findBestPlayer(
+  [
+    { name: "Sonny", goals: "5" },
+    { name: "Dele", goals: "6" },
+    { name: "Harry", goals: "11" }
+  ],
+  15
+);
+
+// 'There is no player with that score yet'
+
+/*   ===================== Array 1 : Find 5 ===================== */
+
+function activePlayer(players) {
+  return players.find(player => player.isActive === false).name; // ===  !player.isActive
+}
+activePlayer(
+  [
+    { name: "Sonny", goals: "5", isActive: true },
+    { name: "Dele", goals: "6", isActive: true },
+    { name: "Harry", goals: "11", isActive: false }
+  ],
+  15
+);
+
+// 'Harry'
+
+/*   ******************** Array 2 : Filter 1 ******************** */
+/*   ******************** Array 2 : Filter 2 ******************** */
+/*   ******************** Array 2 : Filter 3 ******************** */
+/*   ******************** Array 2 : Filter 4 ******************** */
+/*   ******************** Array 2 : Filter 5 ******************** */
+/*   ******************** Array 3 ******************** */
+/*   ******************** Array 4 ******************** */
