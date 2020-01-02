@@ -122,6 +122,30 @@ console.log(howManyTiesCharacterIsListed("May"));
 //  1
 
 //
+
+function getNegativeNumbers(numbers) {
+  return numbers.filter(function(number) {
+    return number < 0;
+  });
+}
+getNegativeNumbers([3, 2, -3, -6, 0, -9]);
+/*
+The same results but simplfied
+
+
+function getNegativeNumbers(numbers) {
+  return numbers.filter((number) => {
+    return number < 0;
+  })
+getNegativeNumbers([3, 2, -3, -6, 0, -9])
+---------------
+function getNegativeNumbers(numbers) {
+  return numbers.filter((number) => number < 0;
+  )
+}
+getNegativeNumbers([3, 2, -3, -6, 0, -9])
+*/
+
 // ******************* map *******************
 function getCharactersInCapitals(searchCharacter) {
   let characters = ["Donald", "Boris", "May"];
