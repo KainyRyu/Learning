@@ -505,9 +505,70 @@ activePlayer(
 // 'Harry'
 
 /*   ******************** Array 2 : Filter 1 ******************** */
+
+function filterNegativeNum(nums) {
+  //?????? Question : how come it doesn't stop at the first value?
+  return nums.filter(function(num) {
+    //=== return nums.filter((number) => {
+    return num < 0; //=== return nums.filter(num => num < 0);
+  });
+}
+filterNegativeNum([-3, 6, 2, -5, 1, 9, -39]);
+
 /*   ******************** Array 2 : Filter 2 ******************** */
+
+function filterLowerCases(letters) {
+  return letters.filter(letter => {
+    debugger;
+    return letter === letter.toLowerCase();
+    // ===return letters.filter(letter => leter === letter.toLowerCase());
+  });
+}
+// ===return letters.filter(letter => leter === letter.toLowerCase());
+
+filterLowerCases(["A", "b", "c", "D", "E", "f"]);
+
 /*   ******************** Array 2 : Filter 3 ******************** */
+
+function filterActiveUser(users) {
+  return users.filter(user => user.isActive === true).name; //  return users.filter(user => user.isActive === true).name;    Doesn't work
+} //=> user.isActive);   <- should work as well
+
+filterActiveUser([
+  { name: "Sonny", score: "5", isActive: true },
+  { name: "Dele", score: "6", isActive: false },
+  { name: "Harry", score: "11", isActive: false }
+]);
+
 /*   ******************** Array 2 : Filter 4 ******************** */
+
+function countActiveUser(users) {
+  return users.filter(user => user.isActive).length;
+  /* 
+  let activeUsers = users.filter(user => user.isActive);
+  return activeUsers.length;  
+  */
+}
+
+countActiveUser([
+  { name: "Sonny", score: "5", isActive: true },
+  { name: "Dele", score: "6", isActive: false },
+  { name: "Harry", score: "11", isActive: false }
+]);
+
 /*   ******************** Array 2 : Filter 5 ******************** */
+
+function filterGoodPlayer(players, score) {
+  return players.filter(player => player.score >= score);
+}
+filterGoodPlayer(
+  [
+    { name: "Sonny", score: "5", isActive: true },
+    { name: "Dele", score: "6", isActive: false },
+    { name: "Harry", score: "11", isActive: true }
+  ],
+  6
+);
+
 /*   ******************** Array 3 ******************** */
 /*   ******************** Array 4 ******************** */
