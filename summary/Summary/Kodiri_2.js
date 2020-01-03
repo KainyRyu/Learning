@@ -355,4 +355,82 @@ isThisIterable('Hello')
 //true
 // isThisIterable(['Hello', 'World'])   => true
 
+/* ***********************************************************
 
+Dates
+
+*********************************************************** */
+
+/*   ******************** Dates 1 : is a valid date ******************** */
+
+function isDate(x) {
+    return x instanceof Date;
+}
+isDate(new Date());
+
+// true
+/*
+isDate('string')  false
+isDate(39)   false
+isDate('2020-01-01')   false
+*/
+
+/*   ******************** Dates 2 ******************** */
+
+function getDay(dateStr) {
+    let date = new Date(dateStr);
+    return date.getDate();  // 
+}
+getDay('2020-01-02')
+// 2
+
+/*   ******************** Dates 3 ******************** */
+
+function retrieveDayOfTheWeek(date) {
+    return date.getDay();
+}
+retrieveDayOfTheWeek(new Date('2020-01-01'));
+
+// 3   :  Wednesday 
+
+/*   Days
+0: Sunday
+1: Monday
+...
+6: Saturday
+*/
+
+function retrieveDayOfTheWeek(date) {
+    let days = ['Sunday','Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday', 'Sunday']
+    return days[date.getDay()];
+}
+retrieveDayOfTheWeek(new Date('2020-01-01'));
+
+// 'Wednesday'
+
+/*   ******************** Dates 4 ******************** */
+
+function addMinutes(date, minutes) {
+    date.setMinutes(date.getMinutes() + minutes);
+    return date.getMinutes();
+}
+
+addMinutes(new Date('2020-01-01 12:05:00'), 20);
+
+// 25
+
+/*   ******************** Dates 5 ******************** */
+
+function getTime(date) {
+    let hours = normalise(date.getHours());
+    let minutes = normalise(date.getMinutes());
+    let seconds = normalise(date.getSeconds());
+    return `${hours}:${minutes}:${seconds}`;
+}
+function normalise(dateToken) {
+    return dateToken < 10 ? `0${dateToken}` : `${dateToken}`
+}
+
+getTime(new Date('2020-01-10 01:10:05'));
+
+//"01:10:05"
