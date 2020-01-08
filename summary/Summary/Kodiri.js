@@ -390,7 +390,8 @@ Array
 
 *********************************************************** */
 
-/*   ===================== Array 1 : Find 1 ===================== */
+/*   ===================== Array 1 : Find 1 ===================== */ 
+// : will stop at the first correct element
 
 function findNegativeNum(nums) {
   return nums.find(function(num) {
@@ -504,10 +505,10 @@ activePlayer(
 
 // 'Harry'
 
-/*   ******************** Array 2 : Filter 1 ******************** */
+/*   ******************** Array 2 : Filter 1 ******************** */  
+//: filt all element in the given argument
 
 function filterNegativeNum(nums) {
-  //?????? Question : how come it doesn't stop at the first value?
   return nums.filter(function(num) {
     //=== return nums.filter((number) => {
     return num < 0; //=== return nums.filter(num => num < 0);
@@ -529,9 +530,10 @@ function filterLowerCases(letters) {
 filterLowerCases(["A", "b", "c", "D", "E", "f"]);
 
 /*   ******************** Array 2 : Filter 3 ******************** */
-
+//?????Question????    why argument.name   doesn't call the name value?
 function filterActiveUser(users) {
-  return users.filter(user => user.isActive === true).name; //  return users.filter(user => user.isActive === true).name;    Doesn't work
+  return users.filter(user => user.isActive === true).name; 
+  //  return users.filter(user => user.isActive === true).name;    Doesn't work
 } //=> user.isActive);   <- should work as well
 
 filterActiveUser([
@@ -539,6 +541,8 @@ filterActiveUser([
   { name: "Dele", score: "6", isActive: false },
   { name: "Harry", score: "11", isActive: false }
 ]);
+
+//
 
 /*   ******************** Array 2 : Filter 4 ******************** */
 

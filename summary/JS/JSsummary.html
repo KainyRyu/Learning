@@ -44,11 +44,12 @@
       document.write(name[0]);
 
       /*
-Number : Number
-String : string
-Boolean : true or flase
-Array : Array
-Function : Function           */
+        Number : Number
+        String : string
+        Boolean : true or flase
+        Array : Array
+        Function : Function           
+        */
 
       document.write("<br>");
       document.write("<br>");
@@ -131,37 +132,37 @@ Function : Function           */
       var upperCase = "to uppercase";
       var numb = 1;
       document.write(txt.length);
-      document.write("<br>");
+      document.write("<br>"); // 25
       document.write(txt.indexOf("WORLD")); // W is on the 19th index
-      document.write("<br>");
+      document.write("<br>"); // 19
       document.write(txt.slice(0, 7)); // from index 0 until before 7
-      document.write("<br>");
+      document.write("<br>"); //HELLOOO
       document.write(txt.replace("OOOOOOOOOOO", "CCCCCC")); // replace the string
-      document.write("<br>");
+      document.write("<br>"); //HELLCCCCCCOOO WORLD!
       document.write(upperCase);
-      document.write("<br>");
+      document.write("<br>");//to uppercase
       document.write(upperCase.toUpperCase()); // change to uppercase
-      document.write("<br>");
+      document.write("<br>");//TO UPPERCASE
       document.write(numb.toString() + numb.toString()); // change the type to string
+      document.write("<br>"); // 11
       document.write("<br>");
       document.write("<br>");
-      document.write("<br>");
-      document.write("NUMBERS");
+      document.write("*******NUMBERS*******");
       document.write("<br>");
       document.write(Math.PI);
-      document.write("<br>");
+      document.write("<br>"); //3.141592653589793
       document.write(Math.PI.toFixed(5)); // printn upto 5
-      document.write("<br>");
+      document.write("<br>");//3.14159
       document.write(Math.max(1, 2, 3, 4, 5, 6)); // find the max number
-      document.write("<br>");
+      document.write("<br>"); //6
       document.write(Math.random() * 10); // random number in between 0-1
-      document.write("<br>");
+      document.write("<br>");//3.287184687028495 () now in between 0-10 
       document.write("<br>");
       document.write("********** built-in function 2 (Date) ***********");
 
       //*************************** built-in function 2 (Date) ***************************
       document.write("<br>");
-      var date = new Date();
+      var date = new Date(); 
       var month = [
         "Jan",
         "Feb",
@@ -178,19 +179,19 @@ Function : Function           */
       ];
       var days = ["Sun", "Mon", "Tue", "Wed", "Thu", "Fri", "Sat"];
       document.write(date);
-      document.write("<br>");
+      document.write("<br>"); // Wed Jan 08 2020 16:46:49 GMT+0000 (GMT)  
       document.write("Month : ", date.getMonth()); // index number (needs to + 1)
-      document.write("<br>");
+      document.write("<br>"); //Month : 0
       document.write("Month : ", month[date.getMonth()]); // index number (needs to + 1)
-      document.write("<br>");
+      document.write("<br>");  //Month : Jan
       document.write("Day : ", date.getDay());
-      document.write("<br>");
+      document.write("<br>");  //Day : 3
       document.write("Day : ", days[date.getDay()]);
-      document.write("<br>");
+      document.write("<br>");  //Day : Wed
       document.write("Date : ", date.getDate());
-      document.write("<br>");
+      document.write("<br>");  //Date : 8
       document.write("Hours : ", date.getHours());
-      document.write("<br>");
+      document.write("<br>");  //Hours : 16
       document.write("<br>");
       document.write("<br>");
       document.write("********** Array ***********");
@@ -198,7 +199,7 @@ Function : Function           */
       //*************************** Array ***************************
       document.write("<br>");
       var l = [1, 2, 3, 4, 5];
-      document.write(l[2]);
+      document.write(l[2]); // 3rd position of array in index number ( 3 == [2] )
       document.write("<br>");
     </script>
   </body>

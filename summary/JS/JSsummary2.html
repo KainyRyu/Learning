@@ -20,27 +20,28 @@
 
     <script>
       var arr = [1, 2, 3, 4, 5, 6];
-      document.write(arr[0]);
+      document.write(arr[0]); //1
       document.write("<br>");
-      document.write(arr[1]);
+      document.write(arr[1]); //2
       document.write("<br>");
-      document.write(arr.slice(1, 4));
+      document.write(arr.slice(1, 4)); //2,3,4
       document.write("<br>");
-      document.write(arr);
+      document.write(arr); //1,2,3,4,5,6
       document.write("<br>");
-      document.write(arr.pop());
+      document.write(arr.pop()); //6
       document.write("<br>");
-      document.write(arr);
+      document.write(arr); //1,2,3,4,5
       document.write("<br>");
       arr.push(1000);
-      document.write(arr);
+      document.write(arr); //1,2,3,4,5,1000
       document.write("<br>");
-      document.write(arr.join("!!"));
+      document.write(arr.join("!!")); //1!!2!!3!!4!!5!!1000
       document.write("<br>");
       arr.sort();
-      //arr.reverse();
-      document.write(arr);
+      document.write(arr); // 1,1000,2,3,4,5
+      arr.reverse();
       document.write("<br>");
+      document.write(arr); //5,4,3,2,1000,1
       document.write("<br>");
       document.write("***********************");
 
@@ -59,20 +60,20 @@
         working: false
       };
       document.write(person["name"]);
-      document.write("<br>");
+      document.write("<br>"); // [object Object]
       document.write(person["name"]["firstName"]);
-      document.write("<br>");
+      document.write("<br>"); // Kainy
       document.write(person["name"]["lastName"]);
-      document.write("<br>");
+      document.write("<br>"); // Ryu
       document.write(person["age"]);
-      document.write("<br>");
+      document.write("<br>"); // 25
       document.write("Working? : " + person["working"]);
-      document.write("<br>");
+      document.write("<br>"); // Working? : false
       var newPerson = {};
       document.write((newPerson.name = "Kane"));
-      document.write("<br>");
+      document.write("<br>"); // Kane   =>  newPerson  = {name:"Kane"}
       document.write(newPerson);
-      document.write("<br>");
+      document.write("<br>"); //[object Object]
       document.write("*****************if*************");
       document.write("<br>");
       document.write("<br>");
@@ -82,7 +83,7 @@
       } else if (i < 9) {
         document.write("else if one");
       } else if (i > 9) {
-        document.write("else if two");
+        document.write("else if two");  // <= will be printed
       } else {
         document.write("else");
       }
@@ -100,11 +101,11 @@
           document.write("2");
           break;
         case 3:
-          document.write("3");
+          document.write("3");  //  will be printed
           break;
         default:
-          document.write("default"); ////if의 else 같은
-      } ///////조건이 많을 땐 스위치문 사용하는게 if보다 나음
+          document.write("default"); /// if there are many statements, better to use switch
+      } 
       document.write("<br>");
       document.write("<br>");
       document.write("************* for, while **************");
@@ -115,6 +116,8 @@
         document.write(array[i]);
         document.write("<br>");
       }
+//
+
       b = 0;
       while (b < 10) {
         document.write(b);
@@ -132,7 +135,7 @@
       } else {
         var d = 1000;
       }
-      document.write(d);
+      document.write(d);  //100
       document.write("<br>");
       document.write("<br>");
       // var c = 10;

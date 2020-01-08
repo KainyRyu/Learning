@@ -11,7 +11,7 @@
         margin: 50px;
       }
       p {
-        background-color: olivedrab;
+        background-color: pink;
       }
     </style>
     <script
@@ -26,29 +26,24 @@
     <div class="one two four">Hello World 3</div>
     <br />
     <p>
-      Lorem ipsum dolor sit amet consectetur adipisicing elit. Laborum,
-      sapiente!
+      I'm gonna be changed when you click the second button!
     </p>
     <br />
     <h1 id="first">Hello World!</h1>
-    <button id="second" onclick="f()">Click Me!</button>
+    <button id="second" onclick="f()">Get Royalblue</button>
     <!--  f()안에 함수 들어갈 수 있음 -->
-    <h1 id="third">Hello World!</h1>
-    <button id="fourth" onclick="f()">Click Me!</button>
+    <h1 id="third">Have a click!</h1>
+    <button id="fourth" onclick="f()">Me!</button>
     <br />
     <br />
     <br />
 
-    <button id="btn">Button</button>
+    <button id="btn">4th btn</button>
     <br />
 
     <h2 class="hana ">hello wolrd1</h2>
     <h2 class="hana dul ">hello wolrd2</h2>
     <h2 id="nett" class="hana dul sett">hello wolrd3</h2>
-    <h2>hello wolrd4</h2>
-    <h2>hello wolrd5</h2>
-    <h2>hello wolrd6</h2>
-    <h2>hello wolrd7</h2>
 
     <br />
     <br />
@@ -65,23 +60,23 @@
       // document.querySelectorAll('className')
 
       document.write("<br>");
-      k = document.getElementsByClassName("one");
+      k = document.getElementsByClassName("one"); //Hello World1
       console.log(k);
       document.write("<br>");
       document.write(k["0"]);
       document.write("<br>");
-      document.write(k["0"]["innerHTML"]);
+      document.write(k["0"]["innerHTML"]); //Hello World 1
       document.write("<br>");
-      document.write(k["2"]["classList"]);
+      document.write(k["2"]["classList"]); //one two four
       document.write("<br>");
-      document.write(k["2"]["className"]);
+      document.write(k["2"]["className"]); //one two four
       document.write("<br>");
       document.write("<br>");
       document.write("<br>");
 
       ////////////////////////////////
       function f() {
-        document.getElementById("first").innerHTML = "Whazzzaaaaa";
+        document.getElementById("first").innerHTML = "Get Royalblue";
         document.getElementById("first").style.backgroundColor = "royalblue";
       }
 
@@ -100,7 +95,7 @@
         $(this).html("Heluuuuuuu");
       });
       $("#fourth").click(function j() {
-        $("p").html("This is no more lorem ipsum");
+        $("p").html("Changed!");
       });
 
       /*       
