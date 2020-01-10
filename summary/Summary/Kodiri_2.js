@@ -49,11 +49,13 @@ function whereIsHefrom1(country) {
 }
 whereIsHefrom1((name: "Korea"));
 
+//
 function whereIsHefrom2(country) {
   return country.name;
 }
 whereIsHefrom2({ name: "Korea" });
 
+//
 function whereIsHefrom3(countryfn) {
   return countryfn();
 }
@@ -225,7 +227,7 @@ getKeys({
 
 function whatDay(arr) {
     let indexes = [];
-    for (le;t index in arr) {
+    for (let index in arr) {
         indexes.push(index)
     }
     return indexes
